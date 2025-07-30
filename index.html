@@ -15,6 +15,7 @@
     body {
       background: #f7f7f7;
       color: #333;
+      line-height: 1.6;
     }
 
     header {
@@ -62,19 +63,6 @@
       color: #ffd700;
     }
 
-    /* Fade-in animation */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Typing effect */
     #typing-text {
       border-right: 2px solid white;
       white-space: nowrap;
@@ -98,6 +86,17 @@
       margin: auto;
     }
 
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .skills-list {
       display: flex;
       flex-wrap: wrap;
@@ -110,25 +109,26 @@
       color: white;
       padding: 0.5rem 1rem;
       border-radius: 20px;
-      transition: 0.3s;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
 
     .skills-list li:hover {
       background: #1976d2;
+      transform: scale(1.05);
     }
 
     .project-card {
       background: white;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .project-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
     }
 
     .project-card a {
@@ -136,11 +136,27 @@
       text-decoration: none;
     }
 
+    .certification {
+      background: #fff8e1;
+      padding: 1rem;
+      border-left: 4px solid #ff9800;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+    }
+
     footer {
       background: #222;
       color: white;
       text-align: center;
       padding: 1rem;
+    }
+
+    a {
+      color: #0066cc;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -151,6 +167,7 @@
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#certs">Certifications</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -164,7 +181,7 @@
 
   <section id="about" class="fade-in">
     <h2>About Me</h2>
-    <p>I’m Ramkumar, 19 years old, currently pursuing my Bachelor's in Computer Science with a specialization in Artificial Intelligence. I love web development, solving problems, and working on intelligent systems.</p>
+    <p>I’m Ramkumar, currently pursuing my Bachelor's in Computer Science with a specialization in Artificial Intelligence. I’m passionate about coding, designing modern user experiences, and building smart, efficient systems.</p>
   </section>
 
   <section id="skills" class="fade-in">
@@ -176,25 +193,48 @@
       <li>C Language</li>
       <li>Python</li>
       <li>Git & GitHub</li>
+      <li>Responsive Web Design</li>
+      <li>Basic AI/ML Concepts</li>
     </ul>
+  </section>
+
+  <section id="certs" class="fade-in">
+    <h2>Certifications</h2>
+    <div class="certification">
+      <strong>Google – Foundations of AI</strong>
+      <p>Completed an introductory course on Artificial Intelligence including machine learning, neural networks, and ethical AI applications.</p>
+    </div>
+    <div class="certification">
+      <strong>Microsoft – Azure Fundamentals</strong>
+      <p>Learned about core cloud concepts, Azure services, solutions, and cloud governance. Hands-on labs included deploying cloud resources.</p>
+    </div>
+    <div class="certification">
+      <strong>NVIDIA – Deep Learning Essentials</strong>
+      <p>Covered fundamentals of neural networks, GPU-accelerated computing, and deep learning frameworks like TensorFlow and PyTorch.</p>
+    </div>
   </section>
 
   <section id="projects" class="fade-in">
     <h2>Projects</h2>
     <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>This very website — designed to showcase my profile using modern frontend tools.</p>
+      <h3>Smart Portfolio Website</h3>
+      <p>A responsive, animated portfolio site showcasing personal projects and skills using HTML, CSS, and JavaScript.</p>
       <a href="#">View Project</a>
     </div>
     <div class="project-card">
-      <h3>AI Chatbot (Coming Soon)</h3>
-      <p>Building a chatbot using Python and NLP libraries for interactive Q&A experiences.</p>
+      <h3>Weather Forecast Web App</h3>
+      <p>Real-time weather updates using OpenWeather API with elegant UI. Displays temperature, humidity, and local time by city.</p>
+    </div>
+    <div class="project-card">
+      <h3>AI Chatbot</h3>
+      <p>A basic Python chatbot using NLP for general question answering. Built using NLTK and Tkinter for GUI (in progress).</p>
     </div>
   </section>
 
   <section id="contact" class="fade-in">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:ramkumar.naasai@gmail.com">ramkumar.naasai@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919361319842">+91 9361319842</a></p>
     <p>GitHub: <a href="https://github.com/Ramkumar-flash4" target="_blank">github.com/Ramkumar-flash4</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/YOUR_LINKEDIN_ID" target="_blank">linkedin.com/in/YOUR_LINKEDIN_ID</a></p>
     <p>Instagram: <a href="https://www.instagram.com/shadow_rax_x/?hl=en" target="_blank">@shadow_rax_x</a></p>
@@ -205,7 +245,6 @@
   </footer>
 
   <script>
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -215,13 +254,8 @@
       });
     });
 
-    // Fade-in on scroll
     const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px"
-    };
-
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
@@ -229,10 +263,7 @@
         observer.unobserve(entry.target);
       });
     }, appearOptions);
-
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
+    faders.forEach(fader => appearOnScroll.observe(fader));
   </script>
 </body>
 </html>
